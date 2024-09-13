@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Digite sua idade</h1>   
+
+<br><br><br>
+<input type="number" id="id1">
+<input type="button" id="button" value="verificar" onclick="verificar()">
+<div id="res"></div>
+
+
+<script>
+function verificar(){
+var id1 = window.document.getElementById("id1") 
+  var idade = Number (id1.value)
+    var res =window.document.querySelector ('div#res')
+res.innerHTML+= `Voce tem, ` +idade
+
+if (idade<16){
+res.innerHTML+="<p>Voce não tem o voto <strong>obrigatorio</strong></p>"
+
+}
+else if (idade>= 18 && idade<=70){
+res.innerHTML+="<p>Voce tem o voto <strong>obrigatorio</strong></p>"
+
+}
+else if (idade >= 16 && idade < 18 || idade > 70) {
+    res.innerHTML += "<p>O voto é <strong>opcional</strong>.</p>"
+}
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
